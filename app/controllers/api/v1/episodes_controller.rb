@@ -5,12 +5,12 @@ class Api::V1::EpisodesController < ApplicationController
   def index
     @episodes = Episode.all
 
-    render json: @episodes
+    render jsonapi: @episodes
   end
 
   # GET /episodes/1
   def show
-    render json: EpisodeSerializer.new(@episode).serializable_hash.to_json
+    render jsonapi: @episode
   end
 
   # POST /episodes
@@ -18,18 +18,18 @@ class Api::V1::EpisodesController < ApplicationController
     @episode = Episode.new(episode_params)
 
     if @episode.save
-      render json: @episode, status: :created, location: @episode
+      render jsonapi: @episode, status: :created, location: @episode
     else
-      render json: @episode.errors, status: :unprocessable_entity
+      render jsonapi: @episode.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /episodes/1
   def update
     if @episode.update(episode_params)
-      render json: @episode
+      render jsonapi: @episode
     else
-      render json: @episode.errors, status: :unprocessable_entity
+      render jsonapi: @episode.errors, status: :unprocessable_entity
     end
   end
 
