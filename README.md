@@ -17,7 +17,7 @@ In the root folder run `rails db:create`
 
 In the root folder run `rails s`
 
-Int he client folder run `yarn start`
+In the client folder run `yarn start`
 
 
 ## Extra notes
