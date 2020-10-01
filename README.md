@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a bare bones Ember and Rails project using data from [Dedolist](https://dedolist.com/lists/entertainment/friends-tv-episodes/).
 
-Things you may want to cover:
+## Setup instructions
 
-* Ruby version
+Rails: Using ruby 2.7.1 do a `bundle` in the root folder
+Ember: In the client folder using Node 10+ do a `yarn` or `npm install`
 
-* System dependencies
+Data Setup:
+In the root folder run `rails db:create`
 
-* Configuration
 
-* Database creation
+## Starting the application
 
-* Database initialization
+In the root folder run `rails s`
+Int he client folder run `yarn start`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Extra notes
 
-* Deployment instructions
-
-* ...
+The Rails side is API only and uses the GEM [https://github.com/stas/jsonapi.rb](https://github.com/stas/jsonapi.rb)
